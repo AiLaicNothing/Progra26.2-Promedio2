@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class Defeat : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI score_Text;
-    [SerializeField] private InputField username_Inputfield;
+    [SerializeField] private TMP_InputField username_Inputfield;
     private Button sendScore_Button;
 
     private void Start()

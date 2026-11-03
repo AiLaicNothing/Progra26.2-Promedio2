@@ -8,6 +8,7 @@ public class Player_Manager : MonoBehaviour
 
     [SerializeField] private int maxHp;
     private int currentHp;
+    public int CurrentHp => currentHp;
 
     private Player player;
 

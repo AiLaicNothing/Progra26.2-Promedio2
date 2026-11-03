@@ -55,9 +55,9 @@ public class Player : MonoBehaviour
 
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
-        if (Physics.Raycast(ray, out RaycastHit hit, distance, targetLayers))
+        if (Physics.Raycast(ray, out RaycastHit hit, distance))
         {
-            //Debug.Log($"{hit.collider.name}");
+            Debug.Log($"{hit.collider.name}");
             var damageable = hit.collider.GetComponent<IDamageable>();
 
             if (damageable != null) damageable.TakeDamage(damage);
