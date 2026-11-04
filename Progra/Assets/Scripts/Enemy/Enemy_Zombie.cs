@@ -72,7 +72,7 @@ public class Enemy_Zombie : MonoBehaviour, IDamageable
         {
             timer = 0;
             //Debug.Log("Do damage to player");
-            //Player_Manager.Instance.TakeDamage();
+            Player_Manager.Instance.TakeDamage();
         }
     }
 

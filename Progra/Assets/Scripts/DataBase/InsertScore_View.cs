@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InsertScore_View : MonoBehaviour
@@ -64,9 +65,11 @@ public class InsertScore_View : MonoBehaviour
         }
 
         sendButton.interactable = false;
-        messageText.text = "Saving...";
+        messageText.text = "";
 
         controller.SendRequest(nickname, score, hasWon, level, OnCallback);
+
+        SceneManager.LoadScene("Menu");
     }
 
     private void OnCallback(bool success)

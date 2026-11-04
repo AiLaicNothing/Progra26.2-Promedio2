@@ -7,9 +7,9 @@ public class InsertScore_Controller : MonoBehaviour
 {
     private const string url = "http://localhost/Progra26-2-Promedio2/InsertScore.php";
 
-    public void SendRequest(string nickname, int score,
-        bool hasWon, int level, Action<bool> callback)
+    public void SendRequest(string nickname, int score, bool hasWon, int level, Action<bool> callback)
     {
+        Debug.Log($"has won = {hasWon}");
         StartCoroutine(Send(nickname, score, hasWon, level, callback));
     }
 
